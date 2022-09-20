@@ -1,0 +1,55 @@
+// import { useEffect } from "react";
+
+// export default function WeatherApi() {
+//   const apiKey = "003511fe490763d6e3729d6e0090f05f";
+//   const cityName = "germany";
+//   const metric = "units=metric";
+//   const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${apiKey}&${metric}`;
+
+//   useEffect(() => {
+//     fetch(url)
+//       .then(function (response) {
+//         return response.json();
+//       })
+//       .then(function (data) {
+//         console.log([data]);
+//       });
+//   }, []);
+
+//   function renderHTML() {
+//     const element = (
+//       <div>
+//       <h1>Hello, world!</h1>
+//       <h2>It is {new Date().toLocaleTimeString()}.</h2>
+//     </div>
+//     );
+//   }
+//   return <div>App</div>;
+// } 
+
+return (
+    <><div>
+      {data.length > 0 && (
+        <ul>
+          {data.map(function (data) {
+            return (
+              <li key={data.id}>{data.name}</li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+      <div>
+        {data.length > 0 && (
+          <ul>
+            {data.map(function (data) {
+              return (
+                <li key={data.main}>{data.main}</li>
+              );
+            })}
+          </ul>
+        )}
+      </div></>
+  )
+}
+

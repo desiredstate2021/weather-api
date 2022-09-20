@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 
-const apiKey = "003511fe490763d6e3729d6e0090f05f";
+const apiKey = process.env.REACT_APP_THE_API;
 const cityName = "germany";
 const metric = "units=metric";
 const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${apiKey}&${metric}`;
